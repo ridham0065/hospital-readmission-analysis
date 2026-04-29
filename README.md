@@ -16,6 +16,7 @@ MIMIC-III Clinical Database — PhysioNet. Access requires CITI certification an
 
 ## Project Status
 🟡 In Progress — PhysioNet credentialing submitted April 27 2026. CITI certification completed. SQL environment configured. Practice queries written and tested. Awaiting MIMIC-III dataset access approval.
+April 28 2026 — SQL practice completed. Core concepts mastered: SELECT, WHERE, GROUP BY, JOIN, HAVING, ORDER BY. Multi-table clinical readmission analysis queries written and tested.
 
 ## Progress Log
 
