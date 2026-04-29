@@ -15,7 +15,11 @@ GitHub — version control and portfolio
 MIMIC-III Clinical Database — PhysioNet. Access requires CITI certification and credentialing approval.
 
 ## Project Status
-🟡 In Progress — Data access pending. CITI certification completed April 2026.
+🟡 In Progress — PhysioNet credentialing submitted April 27 2026. CITI certification completed. SQL environment configured. Practice queries written and tested. Awaiting MIMIC-III dataset access approval.
+
+## Progress Log
+
+April 27 2026 — Project initiated. CITI certified. PhysioNet application submitted. GitHub repository created. SQL environment set up. Core query logic developed and tested
 
 ## Author
 Ridham Patel · Masters in Health Informatics · University of Scranton
