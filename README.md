@@ -21,6 +21,6 @@ April 28 2026 — SQL practice completed. Core concepts mastered: SELECT, WHERE,
 ## Progress Log
 
 April 27 2026 — Project initiated. CITI certified. PhysioNet application submitted. GitHub repository created. SQL environment set up. Core query logic developed and tested
-
+May 21 2026 — MIMIC-III access granted. Four tables imported. First real queries executed. Key finding: 6.87% 30-day readmission rate across 53,122 eligible patients. Medicare patients overrepresented at 57.89% of readmissions vs 48% of total admissions.
 ## Author
 Ridham Patel · Masters in Health Informatics · University of Scranton
