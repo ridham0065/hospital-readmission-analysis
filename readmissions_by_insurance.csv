@@ -1,0 +1,6 @@
+INSURANCE,total_readmissions,pct_of_readmissions,readmission_rate
+Medicare,1954,57.74,3.68
+Private,966,28.55,1.82
+Medicaid,389,11.5,0.73
+Government,66,1.95,0.12
+"Self Pay",9,0.27,0.02

@@ -1,0 +1,11 @@
+diagnosis_name,total_readmissions
+"Acute Respiratory Failure",111
+"Coronary Artery Disease",111
+"Heart Attack",79
+Pneumonia,53
+"Atrial Fibrillation",48
+"Congestive Heart Failure",48
+"Acute Kidney Failure",39
+"GI Hemorrhage",39
+COPD,37
+"Hypertensive Kidney Disease",37

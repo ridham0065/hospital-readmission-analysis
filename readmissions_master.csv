@@ -1,0 +1,44 @@
+diagnosis_name,INSURANCE,DISCHARGE_LOCATION,total_readmissions,avg_days_to_readmit
+"Acute Respiratory Failure",Medicare,SNF,30,11.0
+"Coronary Artery Disease",Medicare,"HOME HEALTH CARE",29,11.1
+"Coronary Artery Disease",Private,"HOME HEALTH CARE",23,15.3
+"Heart Attack",Medicare,"HOME HEALTH CARE",19,14.1
+"Coronary Artery Disease",Medicare,SNF,19,12.7
+"Acute Respiratory Failure",Medicare,"HOME HEALTH CARE",18,12.4
+"Atrial Fibrillation",Medicare,"HOME HEALTH CARE",17,10.8
+COPD,Medicare,"HOME HEALTH CARE",17,12.6
+"Heart Attack",Medicare,SNF,16,11.4
+"Heart Attack",Medicare,"REHAB/DISTINCT PART HOSP",14,14.6
+"Atrial Fibrillation",Medicare,SNF,13,10.9
+Pneumonia,Medicare,"HOME HEALTH CARE",12,13.5
+"Coronary Artery Disease",Medicare,"REHAB/DISTINCT PART HOSP",12,9.9
+Pneumonia,Medicare,SNF,11,10.1
+"Congestive Heart Failure",Medicare,"HOME HEALTH CARE",11,10.5
+"Acute Kidney Failure",Medicare,"HOME HEALTH CARE",11,10.0
+"Acute Respiratory Failure",Medicaid,"HOME HEALTH CARE",11,13.1
+"Congestive Heart Failure",Medicare,"REHAB/DISTINCT PART HOSP",10,15.1
+"Hypertensive Kidney Disease",Medicaid,HOME,10,6.8
+"Hypertensive Kidney Disease",Medicaid,"HOME HEALTH CARE",10,11.6
+"Hypertensive Kidney Disease",Medicare,HOME,10,13.6
+"Acute Respiratory Failure",Medicare,"LONG TERM CARE HOSPITAL",9,14.7
+"Congestive Heart Failure",Medicare,SNF,8,16.4
+"GI Hemorrhage",Medicare,"HOME HEALTH CARE",8,12.1
+"GI Hemorrhage",Private,HOME,8,14.3
+"Heart Attack",Medicare,HOME,8,15.3
+"Acute Respiratory Failure",Medicare,"REHAB/DISTINCT PART HOSP",8,16.3
+Pneumonia,Medicare,"LONG TERM CARE HOSPITAL",7,8.7
+"Acute Kidney Failure",Medicare,SNF,7,10.3
+"Atrial Fibrillation",Medicare,HOME,7,13.3
+COPD,Medicare,SNF,7,13.4
+"Congestive Heart Failure",Medicare,HOME,6,14.2
+"GI Hemorrhage",Medicare,HOME,6,7.3
+"GI Hemorrhage",Medicare,"LONG TERM CARE HOSPITAL",6,15.3
+"Coronary Artery Disease",Medicare,HOME,6,12.5
+"Acute Respiratory Failure",Private,"REHAB/DISTINCT PART HOSP",6,8.2
+"GI Hemorrhage",Medicare,SNF,5,8.2
+"Acute Kidney Failure",Medicare,"REHAB/DISTINCT PART HOSP",5,17.8
+"Hypertensive Kidney Disease",Private,HOME,5,16.6
+"Coronary Artery Disease",Medicare,"LONG TERM CARE HOSPITAL",5,7.0
+COPD,Medicare,HOME,5,12.4
+"Acute Respiratory Failure",Private,"HOME HEALTH CARE",5,13.0
+"Acute Respiratory Failure",Private,"LONG TERM CARE HOSPITAL",5,10.8
