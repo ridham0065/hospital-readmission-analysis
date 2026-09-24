@@ -4,6 +4,17 @@ Clinical data analysis of 30-day hospital readmission patterns using the MIMIC-I
 ## Dashboard Preview
 ![Hospital Readmission Risk Analysis Dashboard](dashboard-screenshot.png)
 
+## Interactive Dashboard (Python / Plotly)
+Built with Python, Pandas, and Plotly — open `mimic_dashboard.html` in any browser for the full interactive version. Features four chart panels, headline metrics, and hover details across 3,384 readmission events.
+
+**Charts included:**
+- 30-Day Readmissions by Insurance Type
+- 30-Day Readmissions by Discharge Location  
+- 30-Day Readmissions by Diagnosis (Top 10)
+- Readmission Risk by Diagnosis and Insurance (Heatmap)
+
+**Tools:** Python • Pandas • Plotly • SQL • Tableau
+
 ## Key Findings
 - **6.37% overall 30-day readmission rate** — 3,384 readmissions out of 53,122 eligible admissions
 - **Medicare patients are disproportionately readmitted**: 57.74% of all readmissions, vs. 45.76% of eligible admissions overall
