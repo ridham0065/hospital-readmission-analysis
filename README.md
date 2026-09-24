@@ -5,15 +5,27 @@ Clinical data analysis of 30-day hospital readmission patterns using the MIMIC-I
 ![Hospital Readmission Risk Analysis Dashboard](dashboard-screenshot.png)
 
 ## Interactive Dashboard (Python / Plotly)
-Built with Python, Pandas, and Plotly — open `mimic_dashboard.html` in any browser for the full interactive version. Features four chart panels, headline metrics, and hover details across 3,384 readmission events.
+Built with Python, Pandas, and Plotly — open `mimic_dashboard.html` in any browser for the full interactive version. Features five chart panels, headline metrics, and hover details across 3,384 readmission events. Also live via GitHub Pages: https://ridham0065.github.io/hospital-readmission-analysis/mimic_dashboard.html
 
 **Charts included:**
 - 30-Day Readmissions by Insurance Type
 - 30-Day Readmissions by Discharge Location  
 - 30-Day Readmissions by Diagnosis (Top 10)
 - Readmission Risk by Diagnosis and Insurance (Heatmap)
+- 30-Day Readmissions by Age Group
 
 **Tools:** Python • Pandas • Plotly • SQL • Tableau
+
+## Case Study
+A full written case study covering methodology, findings, and clinical recommendations is available in `readmission_case_study.pdf`.
+
+## Predictive Model
+A logistic regression model predicting 30-day readmission probability is in `predictive_model.py`. Model accuracy and feature importances are documented in the script output.
+
+## Limitations & Future Work
+- MIMIC-III is single-institution ICU data from Beth Israel Deaconess Medical Center, Boston — findings may not generalize to other hospital systems
+- Readmission definition captures any return visit, not only unplanned clinical readmissions
+- Future work: ICD-10 diagnosis grouping, length of stay by age group analysis, expanded predictive model with clinical features, external validation dataset
 
 ## Key Findings
 - **6.37% overall 30-day readmission rate** — 3,384 readmissions out of 53,122 eligible admissions
