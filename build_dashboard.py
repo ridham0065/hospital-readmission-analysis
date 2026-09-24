@@ -1,6 +1,6 @@
 """Build a self-contained interactive MIMIC-III 30-day readmissions dashboard.
 
-Reads the four readmission CSVs in this folder and writes mimic_dashboard.html
+Reads the five readmission CSVs in this folder and writes mimic_dashboard.html
 to the Desktop (the parent folder of this project).
 """
 from pathlib import Path
@@ -155,6 +155,26 @@ def risk_heatmap(master, diag_order):
     return fig
 
 
+AGE_ORDER = ["Under 50", "50-65", "66-80", "Over 80"]
+
+
+def age_chart(df):
+    df = df.set_index("age_group").reindex(AGE_ORDER).reset_index()
+    fig = go.Figure(go.Bar(
+        x=df["age_group"], y=df["total_readmissions"],
+        marker=dict(color=NAVY, cornerradius=4),
+        text=df["percentage"].map(lambda p: f"{p:.1f}%"),
+        textposition="outside", textfont=dict(color=INK),
+        hovertemplate="<b>%{x}</b><br>Readmissions: %{y:,}<br>Share of readmissions: %{text}<extra></extra>",
+        cliponaxis=False,
+    ))
+    base_layout(fig, "30-Day Readmissions by Age Group",
+                "Age at admission, derived from patient date of birth")
+    fig.update_xaxes(title_text="Age group")
+    fig.update_yaxes(title_text="30-day readmissions", tickformat=",")
+    return fig
+
+
 def kpi(label, value, note):
     return (f'<div class="kpi"><div class="kpi-label">{label}</div>'
             f'<div class="kpi-value">{value}</div><div class="kpi-note">{note}</div></div>')
@@ -165,6 +185,7 @@ def main():
     dis = pd.read_csv(HERE / "readmissions_by_discharge.csv")
     diag = pd.read_csv(HERE / "readmissions_by_diagnosis.csv")
     master = pd.read_csv(HERE / "readmissions_master.csv")
+    age = pd.read_csv(HERE / "readmissions_by_age.csv")
 
     total = int(ins["total_readmissions"].sum())
     top_ins = ins.loc[ins["total_readmissions"].idxmax()]
@@ -177,6 +198,7 @@ def main():
         discharge_chart(dis),
         diagnosis_chart(diag),
         risk_heatmap(master, diag_order),
+        age_chart(age),
     ]
     divs = [
         f.to_html(full_html=False, include_plotlyjs=("inline" if i == 0 else False), config=CONFIG,
@@ -214,6 +236,7 @@ def main():
   .grid {{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:24px; }}
   .card {{ border:1px solid var(--line); border-radius:10px; padding:8px; background:#fff;
            box-shadow:0 1px 2px rgba(16,24,40,.04); min-width:0; }}
+  .card.wide {{ grid-column:1 / -1; }}
   footer {{ max-width:1400px; margin:0 auto; padding:0 40px 32px; font-size:12px; color:var(--muted); }}
   @media (max-width: 1000px) {{
     .grid {{ grid-template-columns:1fr; }}
@@ -237,6 +260,7 @@ def main():
     <div class="card">{divs[1]}</div>
     <div class="card">{divs[2]}</div>
     <div class="card">{divs[3]}</div>
+    <div class="card wide">{divs[4]}</div>
   </section>
 </main>
 <footer>Source: MIMIC-III v1.4 (PhysioNet). Hover any bar or cell for details; use the chart toolbar to zoom or download a PNG.</footer>
